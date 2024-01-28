@@ -1,6 +1,5 @@
 package ru.gb.hw;
 
-import java.nio.file.Path;
 import java.util.Arrays;
 
 public class Main {
@@ -19,6 +18,9 @@ public class Main {
 
         System.out.println("Исходные значения из упакованных данных:");
         Arrays.stream(dataFromBinFile).forEach(System.out::print);
+
+        //Task 3
+        FilePrefixAdder.addPrefixToFiles("new_", "./test/1.txt", "./test/2.txt", "file3.txt");
 
     }
 }
