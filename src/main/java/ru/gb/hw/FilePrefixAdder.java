@@ -3,7 +3,14 @@ package ru.gb.hw;
 import java.io.File;
 
 public class FilePrefixAdder {
-
+    /**
+     * Добавляет указанный префикс к именам файлов. Если файл существует, он переименовывается
+     * с добавлением префикса, и выводится соответствующее сообщение. Если файл не существует,
+     * выводится сообщение об ошибке.
+     *
+     * @param prefix     Префикс, который будет добавлен к именам файлов.
+     * @param filenames  Имена файлов, к которым необходимо добавить префикс.
+     */
     public static void addPrefixToFiles(String prefix, String... filenames) {
         for (String filename : filenames) {
             File file = new File(filename);

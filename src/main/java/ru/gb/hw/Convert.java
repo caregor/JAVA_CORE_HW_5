@@ -4,6 +4,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Convert {
+    /**
+     * Конвертирует массив целочисленных значений в упакованные байты и записывает их в бинарный файл.
+     * Каждое целочисленное значение из массива представляет собой 2 бита в упакованном виде.
+     *
+     * @param fieldValues Массив целочисленных значений, которые будут сконвертированы и записаны в файл.
+     */
     public static void convertData(int [] fieldValues) {
         int packedData = 0;
         for (int i = 0; i < 9; i++) {
