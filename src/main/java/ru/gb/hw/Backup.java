@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 
 
 public class Backup {
@@ -28,7 +29,7 @@ public class Backup {
     private static void copyFiles(File source, File destination) throws IOException {
         if (source.isDirectory()) {
             if (!source.getName().equals("backup")) {
-                for (File file : source.listFiles()) {
+                for (File file : Objects.requireNonNull(source.listFiles())) {
                     copyFiles(file, destination);
                 }
             }
